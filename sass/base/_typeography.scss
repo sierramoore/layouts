@@ -1,0 +1,29 @@
+*,
+*::after,
+*::before{
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 2rem;
+  color: $color-primary;
+  padding: 3rem;
+  //margin: 0 auto;
+}
+.main {
+  max-width: $grid-width;
+  margin: 0 auto;
+  display: inline-block;
+}
+a{
+  text-decoration: none;
+  color: $color-primary;
+}
