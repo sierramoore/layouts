@@ -1,5 +1,6 @@
 .row {
   max-width: $grid-width;
+  min-width: $header-width;
   margin: 0 auto;
   text-align: center;
 
@@ -20,16 +21,36 @@
 
   .col-1-of-2 {
     width: calc((100% - #{$gutter-horizontal}) / 2);
-    //width: calc((#{$header-width} - #{$gutter-horizontal}));
     height: 60vh;
+    line-height: 60vh;
     border-radius: $border-radius;
     background-color: $color-boxes;
-    line-height: 60vh;
   }
 
-  //.col-1-of-3 {
-  //  width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
-  //  background-color: $color-boxes;
-  //}
+  .col-1-of-3 {
+    width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+    height: 60vh;
+    line-height: 60vh;
+    border-radius: $border-radius;
+    background-color: $color-boxes;
+
+    &__page3 {
+      @extend .col-1-of-3;
+      width: calc((100% - 8 * #{$gutter-horizontal}) / 3);
+      height: 14vh;
+      line-height: 14vh;
+
+      &:not(:last-child) {
+        margin-right: $gutter-horizontal * 4;
+      }
+    }
+  }
+
+  &__mid {
+    @extend .row;
+    width: 100%;
+    margin-left: calc(33% + #{$gutter-horizontal / 2} * 3);
+    //margin-left: calc((100% - #{$gutter-horizontal * 4}) / 2);
+  }
 
 }

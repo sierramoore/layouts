@@ -20,6 +20,7 @@ body{
 }
 .main {
   max-width: $grid-width;
+  //min-width: $header-width;
   margin: 0 auto;
   display: inline-block;
 }
